@@ -6,11 +6,11 @@ class UsuarioTinder {
   }
 
   buscarCita() {
-    console.log("Buscando posibles parejas en " + this.ciudad + " para " + nombre);
+    console.log("Buscando posibles parejas en " + this.ciudad + " para " + this.nombre);
   }
 }
 
-class UsuarioPremium extend UsuarioTinder {
+class UsuarioPremium extends UsuarioTinder {
   constructor(nombre, edad, ciudad, superLikes) {
     super(nombre, edad, ciudad);
     this.superLikes = superLikes;
@@ -26,7 +26,7 @@ class UsuarioPremium extend UsuarioTinder {
   }
 }
 
-const usuario1 = UsuarioTinder("Ana", 23, "Bogotá");
+const usuario1 = new UsuarioTinder("Ana", 23, "Bogotá");
 const usuario2 = new UsuarioPremium("Carlos", 26, "Medellín", 5);
 
 usuario2.buscarCita();
