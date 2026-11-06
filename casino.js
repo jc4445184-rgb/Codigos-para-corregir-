@@ -1,5 +1,5 @@
 class JugadorCasino {
-  construct(nombre, saldoInicial) {
+  constructor(nombre, saldoInicial) {
     this.nombre = nombre;
     this.saldo = saldoInicial;
   }
@@ -10,7 +10,7 @@ class JugadorCasino {
   }
 
   jugarTragamonedas(apuesta) {
-    if (saldo < apuesta) {
+    if (this.saldo < apuesta) {
       console.log("No tienes suficiente saldo para apostar.");
       return;
     }
@@ -29,6 +29,6 @@ class JugadorCasino {
 }
 
 const jugador1 = new JugadorCasino("Pedro", 100);
-jugador1.Depositar(50);
+jugador1.depositar(50);
 jugador1.jugarTragamonedas(30);
 jugador1.jugarTragamonedas(200);
